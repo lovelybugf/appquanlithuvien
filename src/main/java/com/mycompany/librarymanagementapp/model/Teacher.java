@@ -33,11 +33,10 @@ public class Teacher extends Person {
         this.department = department;
     }
 
-    public Teacher(String teacherCode, String department, Borrower borrower, int id, String fullName, Date dob, String address) {
+    public Teacher(String teacherCode, String department, int id, String fullName, Date dob, String address) {
         super(fullName, dob, address);
         this.teacherCode = teacherCode;
         this.department = department;
-        this.borrower = borrower;
     }
 
     public String getTeacherCode() {
