@@ -66,7 +66,7 @@ public class BookDAO {
     }
 
     // lay sach bang id
-    public Book getBookById(Long id) {
+    public Book getBookById(Integer id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Book.class, id);
         } catch (Exception e) {
