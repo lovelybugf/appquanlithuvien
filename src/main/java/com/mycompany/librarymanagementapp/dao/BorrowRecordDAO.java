@@ -49,7 +49,7 @@ public class BorrowRecordDAO {
     }
 
     // lay ban ghi muon theo id
-    public BorrowRecord getBorrowRecordById(int id) {
+    public BorrowRecord getBorrowRecordById(Integer id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(BorrowRecord.class, id);
         } catch (Exception e) {
