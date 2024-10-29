@@ -48,7 +48,7 @@ public class BookDAO {
     }
 
     // xoa sach theo id
-    public void deleteBookbById(Long bookId) {
+    public void deleteBookbById(Integer bookId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
