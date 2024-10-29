@@ -47,7 +47,7 @@ public class CategoryDAO {
     }
 
     // xoa category
-    public void deleteCategoryById(Long categoryId) {
+    public void deleteCategoryById(Integer categoryId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
