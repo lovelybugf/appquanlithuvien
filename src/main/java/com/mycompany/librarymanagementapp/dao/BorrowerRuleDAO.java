@@ -48,7 +48,7 @@ public class BorrowerRuleDAO {
     }
 
     // lay ra quy dinh theo id
-    public BorrowerRule getBorrowerRuleById(int id) {
+    public BorrowerRule getBorrowerRuleById(Integer id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(BorrowerRule.class, id);
         } catch (Exception e) {
