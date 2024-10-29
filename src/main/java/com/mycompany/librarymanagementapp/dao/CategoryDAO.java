@@ -65,7 +65,7 @@ public class CategoryDAO {
     }
 
     // lay category theo id
-    public Category getCategoryById(Long id) {
+    public Category getCategoryById(Integer id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Category.class, id);
         } catch (Exception e) {
