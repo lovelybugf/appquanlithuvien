@@ -4,17 +4,27 @@
 
 package com.mycompany.librarymanagementapp;
 
-
 import com.mycompany.librarymanagementapp.model.*;
 import com.mycompany.librarymanagementapp.dao.*;
+import com.mycompany.librarymanagementapp.view.Giaodienchinh;
+import com.mycompany.librarymanagementapp.view.*;
+import javax.swing.SwingUtilities;
 
-/**
- *
- * @author ddd
- */
 public class LibraryManagementApp {
 
     public static void main(String[] args) {
+        new LibraryManagementApp().run();
+    }
+
+    public void run() {
+        SwingUtilities.invokeLater(() -> {
+            Giaodienchinh giaodienchinh = new Giaodienchinh();
+            giaodienchinh.setVisible(true);
+        });
+//         SwingUtilities.invokeLater(() -> {
+//            AccountManagerGUI accountManagerGUI = new AccountManagerGUI();
+//            accountManagerGUI.setVisible(true);  
+//        });
         System.out.println("Hello World!");
         
         PublisherDAO publisherDAO = new PublisherDAO();

@@ -59,7 +59,7 @@ public class User {
     public Integer getUserId() {
         return userId;
     }
-
+  
     public String getUsername() {
         return username;
     }
